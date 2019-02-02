@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity(), Callback {
             FeedItem(it.title, it.author, it.date, it.source, it.enclosure.url)
         }
 
-        adapter = ItemFeedAdapter(listFeedItem, this)
         adapter.notifyDataSetChanged()
     }
 }
