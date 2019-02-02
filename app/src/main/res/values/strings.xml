@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FeedKotlin</string>
+    <string name="label_view_more">VER MAIS</string>
 </resources>
