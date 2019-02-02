@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import br.com.feed.R
 import br.com.feed.dto.FeedItem
+import br.com.feed.util.DownloadImageTask
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -41,6 +42,7 @@ class ItemFeedAdapter(val list: ArrayList<FeedItem>, val context: Context): Recy
             val intent = Intent(Intent.ACTION_VIEW, list[position].link)
             context.startActivity(intent)
         }
+        DownloadImageTask(holder?.image!!).execute(list[position].image)
     }
 
     override fun getItemCount(): Int = list.size
