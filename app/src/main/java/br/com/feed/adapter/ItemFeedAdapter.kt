@@ -37,7 +37,7 @@ class ItemFeedAdapter(val list: ArrayList<FeedItem>, val context: Context): Recy
         holder?.title?.text = list[position].title
         holder?.author?.text = list[position].author
         holder?.date?.text = SimpleDateFormat("dd/MM/yyyy", Locale("pt", "BR")).format(Date(list[position].date))
-        holder?.title?.setOnClickListener {
+        holder?.btnViewMore?.setOnClickListener {
             val intent = Intent(Intent.ACTION_VIEW, list[position].link)
             context.startActivity(intent)
         }
